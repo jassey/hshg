@@ -1,0 +1,16 @@
+			MailAddress from = new MailAddress("fpefans@gmail.com");
+			MailAddress to = new MailAddress("fpefans@gmail.com");
+			//MailAddress to = new MailAddress("jiyang@dist.com.cn");
+
+
+			MailMessage message = new MailMessage(from, to);
+			message.Subject = "À´×ÔÍøÕ¾µÄÓÊ¼ş";
+			message.Body = "»¶Ó­·ÃÎÊ Http://www.google.com \n »¶Ó­»¶Ó­£¡";
+			SmtpClient client = new SmtpClient("smtpx.sina.net", 25);
+
+			client.UseDefaultCredentials = true;
+			client.Credentials = new System.Net.NetworkCredential("jiyang@dist.com.cn", "oo7007jy");
+			
+			Console.WriteLine("Sending an e-mail message to {0} by using SMTP host {1} port {2}.",
+				 to.ToString(), client.Host, client.Port);
+			client.Send(message);
