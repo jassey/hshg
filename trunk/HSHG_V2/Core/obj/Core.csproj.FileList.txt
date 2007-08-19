@@ -1,0 +1,8 @@
+bin\Debug\Core.dll
+bin\Debug\Core.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Core.dll
+obj\Debug\Core.pdb
+bin\Debug\Spring.Core.dll
+bin\Debug\antlr.runtime.dll
+bin\Debug\Common.Logging.dll
