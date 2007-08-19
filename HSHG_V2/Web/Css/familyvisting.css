@@ -1,0 +1,37 @@
+a:link {
+	font-family:  Verdana, "宋体", "楷体_GB2312";
+		font-size: 12px;
+	color: #DB6A00;
+	text-decoration: none;
+}
+a:hover {
+	font-family:  Verdana,"宋体", "楷体_GB2312";
+		font-size: 12px;
+	color: #DB6A00;
+	text-decoration: none;
+}
+a:visited {
+	font-size: 12px;
+	color: #DB6A00;
+	text-decoration: none;
+	font-family:  Verdana, "宋体", "楷体_GB2312";
+}
+.txt14 {
+	font-family:  Verdana, "宋体", "楷体_GB2312";
+	font-size: 14px;
+}
+.txt12 {
+	font-family:  Verdana, "宋体", "楷体_GB2312";
+	font-size: 12px;
+	line-height: 18px;
+}
+.txt18 {
+	font-family:  Verdana, "宋体", "楷体_GB2312";
+	font-size: 18px;
+}
+.picshadow{
+ border: 2px solid #ffffff;
+ filter:progid:DXImageTransform.Microsoft.Shadow(enabled=true,color=#666666,direction=135,strength=3);
+ table-layout:fixed;
+}
+
