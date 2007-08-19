@@ -1,0 +1,71 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B3ECD32-D7DA-43B7-BB0A-040F657AFF35}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bll</RootNamespace>
+    <AssemblyName>Bll</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SubSonic, Version=2.0.3.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeGen\Bll.Bll.Role.cs" />
+    <Compile Include="CodeGen\Bll.Bll.RoleController.cs" />
+    <Compile Include="CodeGen\Bll.Bll.SPs.cs" />
+    <Compile Include="CodeGen\Bll.Bll.Sysconstraint.cs" />
+    <Compile Include="CodeGen\Bll.Bll.Syssegment.cs" />
+    <Compile Include="CodeGen\Bll.Bll.User.cs" />
+    <Compile Include="CodeGen\Bll.Bll.UserController.cs" />
+    <Compile Include="CodeGen\Bll.Bll.UserInfo.cs" />
+    <Compile Include="CodeGen\Bll.Bll.UserInfoController.cs" />
+    <Compile Include="CodeGen\Bll.Bll.UserInRole.cs" />
+    <Compile Include="CodeGen\Bll.Bll.UserInRoleController.cs" />
+    <Compile Include="CodeGen\Bll.Structures.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemManage\Role.cs" />
+    <Compile Include="SystemManage\RoleController.cs" />
+    <Compile Include="SystemManage\User.cs" />
+    <Compile Include="SystemManage\UserManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
