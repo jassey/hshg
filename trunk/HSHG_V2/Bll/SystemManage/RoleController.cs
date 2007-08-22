@@ -18,10 +18,6 @@ namespace Bll.SystemManage
 
     public partial class RoleController
     {
-
-		/// <summary>
-		/// Updates a record, can be used with the Object Data Source
-		/// </summary>
 		[DataObjectMethod(DataObjectMethodType.Update, true)]
 		public void Update(string RoleName, string Comment, Guid original_RoleId)
 		{
