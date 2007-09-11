@@ -14,9 +14,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using Core.Utility;
+using Hshg.Core.Utility;
 
-namespace Core.DataBind.Validate
+namespace Hshg.Core.DataBind.Validate
 {
     /// <summary>
     /// 数据校验相关异常

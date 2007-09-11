@@ -9,8 +9,8 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using Bll.SystemManage;
-using Core.Utility;
+using Hshg.Bll.SystemManage;
+using Hshg.Core.Utility;
 
 public partial class _Index : System.Web.UI.Page
 {

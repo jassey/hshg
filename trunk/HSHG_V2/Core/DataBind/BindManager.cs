@@ -15,9 +15,9 @@ using System.Drawing.Design;
 using System.Reflection;
 
 using Spring.DataBinding;
-using Core.DataBind.Validate;
+using Hshg.Core.DataBind.Validate;
 
-namespace Core.DataBind
+namespace Hshg.Core.DataBind
 {
 	[ParseChildren(true, "BindItems")]
 	[PersistChildren(false)]

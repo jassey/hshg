@@ -1,6 +1,6 @@
 using System;
 
-namespace Core.Utility
+namespace Hshg.Core.Utility
 {
 	/// <summary>
 	/// ClientScript 的摘要说明。

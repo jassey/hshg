@@ -12,7 +12,7 @@ using System.Xml.Serialization;
 using SubSonic; 
 using SubSonic.Utilities;
 
-namespace Bll.SystemManage
+namespace Hshg.Bll.SystemManage
 {
 	/// <summary>
 	/// Strongly-typed collection for the UserInfo class.

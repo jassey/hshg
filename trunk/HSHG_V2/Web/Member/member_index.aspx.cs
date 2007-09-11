@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using Bll.SystemManage;
+using Hshg.Bll.SystemManage;
 
 public partial class Member_member_index : System.Web.UI.Page
 {

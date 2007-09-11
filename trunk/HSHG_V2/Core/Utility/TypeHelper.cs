@@ -5,7 +5,7 @@ using System.Reflection;
 using System.IO;
 using System.Collections.Generic;
 
-namespace Core.Utility
+namespace Hshg.Core.Utility
 {
 	public class TypeHelper
 	{
