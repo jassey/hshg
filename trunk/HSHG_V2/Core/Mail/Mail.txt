@@ -9,7 +9,7 @@
 			SmtpClient client = new SmtpClient("smtpx.sina.net", 25);
 
 			client.UseDefaultCredentials = true;
-			client.Credentials = new System.Net.NetworkCredential("jiyang@dist.com.cn", "oo7007jy");
+			client.Credentials = new System.Net.NetworkCredential("addr", "password");
 			
 			Console.WriteLine("Sending an e-mail message to {0} by using SMTP host {1} port {2}.",
 				 to.ToString(), client.Host, client.Port);
