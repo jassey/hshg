@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web.Security;
 
-namespace Bll.SystemManage
+namespace Hshg.Bll.SystemManage
 {
 	public class UserManager
 	{

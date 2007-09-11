@@ -10,7 +10,7 @@ using System.ComponentModel;
 using System.Collections;
 using System.Web.UI;
 
-namespace Core.DataBind
+namespace Hshg.Core.DataBind
 {
 	class MyComponmentDesigner : ControlDesigner
 	{
@@ -20,14 +20,11 @@ namespace Core.DataBind
 		{
 			get
 			{
-
-
 				if (_Verbs == null)
 				{
 					_Verbs = new DesignerVerbCollection();
 					_Verbs.Add(new DesignerVerb("添加页面控件到BindManager", new EventHandler(this.OnTest)));
 				}
-
 				return _Verbs;
 			}
 		}

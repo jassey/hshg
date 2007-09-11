@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Default.master" AutoEventWireup="true" CodeFile="Member_RegisterInfo.aspx.cs" Inherits="member_registerinfo" Title="Untitled Page" %>
 
-<%@ Register Assembly="Core" Namespace="Core.DataBind" TagPrefix="cc1" %>
+<%@ Register Assembly="Core" Namespace="Hshg.Core.DataBind" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="DefaultPlaceHolder" Runat="Server">
 
 <table width="745" align="center">
