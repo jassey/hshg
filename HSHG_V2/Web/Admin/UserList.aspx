@@ -12,7 +12,7 @@
                 <div>
                     <div style="width: 441px; height: 30px">
                         &nbsp;<asp:Button ID="btnNew" runat="server" CssClass="greenButton" Height="24px"
-                             Text="新增" Width="73px" />&nbsp;
+                             Text="新增" Width="73px" OnClick="btnNew_Click" />&nbsp;
                         <asp:Button ID="btnDelete" runat="server" CssClass="greenButton" Height="24px" 
                             Text="删除选中" /></div>
                     <asp:GridView ID="gridMain" runat="server" AutoGenerateColumns="False" CellPadding="3"

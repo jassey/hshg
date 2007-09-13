@@ -5,9 +5,6 @@
 <%@ Register Src="LeftSideControl.ascx" TagName="LeftSideControl" TagPrefix="uc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="DefaultPlaceHolder" Runat="Server">
-
-
-    
     
     <div>
         &nbsp;</div>
@@ -21,8 +18,8 @@
                 <td class="tdLight" style="width: 53px">
                 </td>
                 <td class="tdLight" style="width: 332px">
-                    <asp:Button ID="btnSave" runat="server"  Text="保存" Width="74px" OnClick="btnSave_Click" CssClass="greenButton" Height="22px" />&nbsp;<asp:Button
-				ID="btnReturn" runat="server" Text="返回列表" OnClick="btnReturn_Click" CssClass="greenButton" Height="22px" /></td>
+                    <asp:Button ID="btnSave" runat="server"  Text="保存" Width="74px" OnClick="btnSave_Click" Height="22px" />&nbsp;<asp:Button
+				ID="btnReturn" runat="server" Text="返回列表" OnClick="btnReturn_Click" Height="22px" /></td>
             </tr>
 			<tr>
 				<td style="width: 53px" class="tdLight"><nobr>
