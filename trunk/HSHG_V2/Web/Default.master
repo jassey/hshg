@@ -4,9 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>“智人慧心”助学网：因为爱，所以我们快乐！</title>
-    <link href="css/StyleSheet.css" rel="stylesheet" type="text/css" />
-    <link href='<%=ResolveUrl("~/css/StyleSheet.css")%>' rel="stylesheet" type="text/css" />    
+    <title>“智人慧心”助学网：因为爱，所以我们快乐！</title> 
 </head>
 <body>
     <form id="form1" runat="server">
@@ -29,13 +27,13 @@
             </tr>
             <tr>
                 <td style="text-align: center; height: 3px;">
-                <img src='<%=ResolveUrl("~/images/line_bottom.gif")%>' width="754" height="4" />
+					<asp:Image ID="Image2" runat="server" ImageUrl="~/Images/line_bottom.gif"  Width="754" Height = "4" /><br />
                 </td>
             </tr>
-            <tr>
-                <td style="height: 14px; text-align: center">
-                </td>
-            </tr>
+			<tr>
+				<td style="text-align: center">
+				</td>
+			</tr>
             <tr>
                 <td style="text-align: center">
                     <a href="duty.html">免责声明</a> | <a href="privacy.html">隐私条款</a> | <a href="help.html">
@@ -48,7 +46,7 @@
             </tr>
             <tr>
                 <td style="height: 14px; text-align: center">
-                    <img src='<%=ResolveUrl("~/images/pagebottom.gif")%>' width="770" height="58" /></td>
+					<asp:Image ID="Image1" runat="server" ImageUrl="~/images/pagebottom.gif" /></td>
             </tr>
             <tr>
                 <td style="height: 14px; text-align: center" bgcolor="#0c543e">

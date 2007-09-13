@@ -17,14 +17,14 @@ public partial class admin_RoleInfo : System.Web.UI.Page
 	{
 		get 
 		{
-			if (this.Session["role"] != null)
+			if (this.ViewState["role"] != null)
 			{
-				return Session["role"] as Role;
+				return ViewState["role"] as Role;
 			}
 			else
 			{
 				Role role = new Role();
-				Session["role"] = role;
+				ViewState["role"] = role;
 				return role;
 			}
 		}
@@ -44,12 +44,9 @@ public partial class admin_RoleInfo : System.Web.UI.Page
 				this.角色名.Text = CurrentRole.RoleName;
 				this.说明.Text = CurrentRole.Comment;
 			}
-			else
-			{
-				CurrentRole = new Role();
-			}
 		}
     }
+
 	protected void btnReturn_Click(object sender, EventArgs e)
 	{
 		this.Response.Redirect("RoleList.aspx");
@@ -68,6 +65,7 @@ public partial class admin_RoleInfo : System.Web.UI.Page
 
 		CurrentRole.RoleName = 角色名.Text;
 		CurrentRole.Comment = 说明.Text;
+
 		CurrentRole.Save();
 
 		this.Response.Redirect("RoleList.aspx");
