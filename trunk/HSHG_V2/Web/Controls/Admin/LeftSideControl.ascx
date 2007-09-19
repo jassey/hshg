@@ -20,13 +20,13 @@
             <td align="right">
                 <img height="9" src="../images/icon_dot_04.gif" width="10" /></td>
             <td>
-                角色管理</td>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/RoleList.aspx">角色管理</asp:HyperLink></td>
         </tr>
         <tr style="color: #88b927; text-decoration: underline">
             <td align="right">
                 <img height="9" src="../images/icon_dot_04.gif" width="10" /></td>
             <td>
-                用户管理</td>
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/UserInfo.aspx">用户管理</asp:HyperLink><a href="../../Admin/UserInfo.aspx"></a></td>
         </tr>
         <tr style="color: #88b927; text-decoration: underline">
             <td align="right">
