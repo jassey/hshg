@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Default.master" AutoEventWireup="true" CodeFile="UserList.aspx.cs" Inherits="admin_UserList" Title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Default.master" AutoEventWireup="true" CodeFile="UserList.aspx.cs"
+    Inherits="admin_UserList" Title="Untitled Page" %>
 
-<%@ Register Src="LeftSideControl.ascx" TagName="LeftSideControl" TagPrefix="uc1" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="DefaultPlaceHolder" Runat="Server">
-    <table width=740 align=center>
+<%@ Register Src="../Controls/Admin/LeftSideControl.ascx" TagName="LeftSideControl" TagPrefix="uc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="DefaultPlaceHolder" runat="Server">
+    <table width="740" align="center">
         <tr>
             <td style="width: 168px">
                 <uc1:LeftSideControl ID="LeftSideControl1" runat="server" />
@@ -12,20 +12,31 @@
                 <div>
                     <div style="width: 441px; height: 30px">
                         &nbsp;<asp:Button ID="btnNew" runat="server" CssClass="greenButton" Height="24px"
-                             Text="新增" Width="73px" OnClick="btnNew_Click" />&nbsp;
-                        <asp:Button ID="btnDelete" runat="server" CssClass="greenButton" Height="24px" 
-                            Text="删除选中" /></div>
+                            Text="新增" Width="73px" OnClick="btnNew_Click" />&nbsp;
+                        <asp:Button ID="btnDelete" runat="server" CssClass="greenButton" Height="24px" Text="删除选中"
+                            OnClick="btnDelete_Click" /></div>
                     <asp:GridView ID="gridMain" runat="server" AutoGenerateColumns="False" CellPadding="3"
                         CellSpacing="1" DataKeyNames="UserId" DataSourceID="ObjectDataSource1" GridLines="None"
                         Width="648px">
                         <Columns>
+                            <asp:TemplateField>
+                                 <ItemTemplate>
+                                    <asp:CheckBox ID="chkSelect" runat="server" />
+                                </ItemTemplate>
+                                <HeaderTemplate>
+                                    <asp:CheckBox ID="chkSelectAll" runat="server" OnCheckedChanged="chkSelectAll_CheckedChanged"
+                                        AutoPostBack="True" />
+                                </HeaderTemplate>
+                                <ItemStyle Width="30px" HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Center" />
+                            </asp:TemplateField>
                             <asp:HyperLinkField DataNavigateUrlFields="UserId" DataNavigateUrlFormatString="UserInfo.aspx?id={0}"
                                 DataTextField="UserName" HeaderText="用户名" />
                             <asp:BoundField DataField="Email" HeaderText="邮件" SortExpression="Email" />
-                            <asp:CheckBoxField DataField="IsMailValidate" HeaderText="邮件认证" SortExpression="IsMailValidate" />
-                            <asp:CheckBoxField DataField="IsLocked" HeaderText="锁定" SortExpression="IsLocked" />
+                            <asp:CheckBoxField DataField="IsMailValidate" HeaderText="通过邮件认证" SortExpression="IsMailValidate" />
+                            <asp:CheckBoxField DataField="IsLocked" HeaderText="是否锁定" SortExpression="IsLocked" />
                             <asp:BoundField DataField="CreateDate" HeaderText="创建日期" SortExpression="CreateDate" />
-                            <asp:BoundField DataField="LastLoginDate" HeaderText="上次登录日期" SortExpression="LastLoginDate" />
+                            <asp:BoundField DataField="LastLoginDate" HeaderText="上次登录时间" SortExpression="LastLoginDate" />
                         </Columns>
                         <RowStyle BackColor="WhiteSmoke" />
                         <EmptyDataTemplate>
@@ -36,7 +47,7 @@
                     <br />
                     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="Delete"
                         InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="FetchAll"
-                        TypeName="Bll.SystemManage.UserController" UpdateMethod="Update">
+                        TypeName="Hshg.Bll.SystemManage.UserController" UpdateMethod="Update">
                         <DeleteParameters>
                             <asp:Parameter Name="UserId" Type="Object" />
                         </DeleteParameters>
@@ -78,4 +89,3 @@
         </tr>
     </table>
 </asp:Content>
-
