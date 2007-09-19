@@ -52,8 +52,8 @@
     <Compile Include="CodeGen\Bll.Bll.UserInRoleController.cs" />
     <Compile Include="CodeGen\Bll.Structures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SystemManage\Role.cs" />
     <Compile Include="SystemManage\RoleController.cs" />
+    <Compile Include="SystemManage\RoleManager.cs" />
     <Compile Include="SystemManage\User.cs" />
     <Compile Include="SystemManage\UserManager.cs" />
   </ItemGroup>

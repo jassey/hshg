@@ -1,7 +1,9 @@
 ﻿
 <%@ Page Language="C#" MasterPageFile="~/Default.master" AutoEventWireup="true" CodeFile="RoleList.aspx.cs" Inherits="admin_RoleList"  %>
 
-<%@ Register Src="LeftSideControl.ascx" TagName="LeftSideControl" TagPrefix="uc1" %>
+<%@ Register Src="../Controls/Admin/LeftSideControl.ascx" TagName="LeftSideControl"
+    TagPrefix="uc1" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="DefaultPlaceHolder" Runat="Server">
 
@@ -10,7 +12,8 @@
         <table align="center" style="width: 759px">
             <tr>
                 <td rowspan="3" style="width: 158px">
-                    &nbsp;<uc1:LeftSideControl id="LeftSideControl1" runat="server"></uc1:LeftSideControl></td>
+                    &nbsp;<uc1:LeftSideControl ID="LeftSideControl1" runat="server" />
+                </td>
                 <td>
 			&nbsp;<asp:Button ID="btnNew" runat="server" Text="新增" Width="73px" OnClick="btnNew_Click" Height="24px" CssClass="greenButton" />&nbsp;
 		<asp:Button ID="btnDelete" runat="server" Text="删除选中" Height="24px" OnClick="btnDelete_Click" CssClass="greenButton" />&nbsp;<br />

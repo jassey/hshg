@@ -9,8 +9,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using Hshg.Bll.SystemManage;
+using Bll.SystemManage;
 
-
+// 角色信息页面
 public partial class admin_RoleInfo : System.Web.UI.Page
 {
 	public Role CurrentRole
@@ -30,7 +31,7 @@ public partial class admin_RoleInfo : System.Web.UI.Page
 		}
 		set
 		{
-			Session["role"] = value;
+			ViewState["role"] = value;
 		}
 	}
 
@@ -54,26 +55,22 @@ public partial class admin_RoleInfo : System.Web.UI.Page
 
 	protected void btnSave_Click(object sender, EventArgs e)
 	{
-		string s = this.角色名.Text;
-
-		if (Role.CheckExists(CurrentRole.RoleId, s))
+		if (this.IsValid)
 		{
-			lblInfo.Visible = true;
-			lblInfo.Text = "该角色名已存在!";
-			return;
+			CurrentRole.RoleName = 角色名.Text;
+			CurrentRole.Comment = 说明.Text;
+			CurrentRole.Save();
+
+			this.Response.Redirect("RoleList.aspx");
 		}
-
-		CurrentRole.RoleName = 角色名.Text;
-		CurrentRole.Comment = 说明.Text;
-
-		CurrentRole.Save();
-
-		this.Response.Redirect("RoleList.aspx");
 	}
 
-	protected void Button1_Click(object sender, EventArgs e)
+	protected void Validator_RoleName_ServerValidate(object source, ServerValidateEventArgs args)
 	{
-
+		// 检查角色名是否存在
+		if (RoleManager.RoleExists(CurrentRole.RoleId, args.Value))
+		{
+			args.IsValid = false;
+		}
 	}
-
 }

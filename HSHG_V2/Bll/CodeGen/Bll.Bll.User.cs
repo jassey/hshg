@@ -512,7 +512,6 @@ namespace Hshg.Bll.SystemManage
 					varUserInRole.SetColumnValue("RoleId", l.Value);
 					varUserInRole.Save();
 				}
-
 			}
 
 		}
@@ -522,7 +521,7 @@ namespace Hshg.Bll.SystemManage
 			QueryCommandCollection coll = new SubSonic.QueryCommandCollection();
 			//delete out the existing
 			 QueryCommand cmdDel = new QueryCommand("DELETE FROM UserInRole WHERE UserId=@UserId", User.Schema.Provider.Name);
-			cmdDel.AddParameter("@UserId", varUserId);
+			cmdDel.AddParameter("@UserId", varUserId.ToString());
 			coll.Add(cmdDel);
 			DataService.ExecuteTransaction(coll);
 			foreach (Guid item in itemList) 

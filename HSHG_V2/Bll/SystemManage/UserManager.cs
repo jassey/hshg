@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web.Security;
 
+using SubSonic;
+
 namespace Hshg.Bll.SystemManage
 {
 	public class UserManager
@@ -30,6 +32,27 @@ namespace Hshg.Bll.SystemManage
 				errorInfo = "错误的用户名或口令!";
 				return false;
 			}
+		}
+
+		public static void SaveRoleMap(Guid varUserId, System.Web.UI.WebControls.ListItemCollection itemList)
+		{
+			QueryCommandCollection coll = new SubSonic.QueryCommandCollection();
+			//delete out the existing
+			QueryCommand cmdDel = new QueryCommand("DELETE FROM UserInRole WHERE UserId=@UserId", User.Schema.Provider.Name);
+			cmdDel.AddParameter("@UserId", varUserId.ToString());
+			coll.Add(cmdDel);
+			DataService.ExecuteTransaction(coll);
+			foreach (System.Web.UI.WebControls.ListItem l in itemList)
+			{
+				if (l.Selected)
+				{
+					UserInRole varUserInRole = new UserInRole();
+					varUserInRole.SetColumnValue("UserId", varUserId);
+					varUserInRole.SetColumnValue("RoleId", new Guid(l.Value));
+					varUserInRole.Save();
+				}
+			}
+
 		}
 	}
 }
