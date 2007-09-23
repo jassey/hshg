@@ -4,8 +4,7 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model ID="{6E3D2955-A43A-495C-A2EF-B216AC611B9D}" Loaded="No" Name="HSHG_V2" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="HSHG_V2.pdm"/>
-		<Model ID="{5F19023A-572C-4D81-9081-ED4BC8C2C99B}" Loaded="No" Name="HSHG_V2" Type="{DABA1E0A-0922-4B05-B7F0-B0BD7A73FD33}" URL="file:///C|/Documents and Settings/Administrator/桌面/Hshg V2/需求/HSHG_V2.rqm"/>
-		<Model Expanded="Yes" ID="{A7E553DB-B774-4101-A734-026762BAE817}" Name="YIWU_DataBase_20070515" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="file:///C|/Documents and Settings/Administrator/桌面/doc/YIWU_DataBase_20070515.pdm"/>
+		<Model Expanded="Yes" ID="{6E3D2955-A43A-495C-A2EF-B216AC611B9D}" Name="HSHG_V2" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="HSHG_V2.pdm"/>
 	</Local>
+	<BrowserModule Name="Repository"/>
 </Workspace>
